@@ -1,0 +1,29 @@
+inherit kf5
+
+NAME="kf5-akonadi-mime"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Akonadi MIME type library"
+DESCRIPTION="Akonadi Mime is a library that effectively bridges the type-agnostic
+API of the Akonadi client libraries and the domain-specific KMime library. It
+provides jobs, models and other helpers to make working with emails through
+Akonadi easier."
+
+PKG_NAMES="libKF5AkonadiMime5 libKF5AkonadiMime-devel"
+libKF5AkonadiMime5_CONTENTS="
+	usr/bin/akonadi_benchmarker.exe
+	usr/bin/cygKF5AkonadiMime-5.dll
+	usr/share/config.kcfg/specialmailcollections.kcfg
+	usr/share/doc/${NAME}
+	usr/share/mime/packages/x-vnd.kde.contactgroup.xml
+	usr/share/locale/*/LC_MESSAGES/libakonadi-kmime5.mo
+"
+libKF5AkonadiMime_devel_REQUIRES="libKF5Akonadi-devel"
+libKF5AkonadiMime_devel_CONTENTS="
+	usr/include/KF5/[Aa]konadi/[Kk][Mm]ime/
+	usr/include/KF5/akonadi-mime_version.h
+	usr/lib/cmake/KF5AkonadiMime/
+	usr/lib/libKF5AkonadiMime.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_AkonadiMime.pri
+"
